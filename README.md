@@ -2,7 +2,7 @@
 
 A robust, enterprise-grade task management web application where small teams or startups can assign, track, and manage their daily work efficiently. This tool simplifies collaborative task tracking, ensures smooth workflow management, and provides full organizational oversight. Built for the Algonive Web Development Internship.
 
-## 🎯 Core Requirements (Project Task 2)
+## 🎯 Core Requirements
 
 * **User Authentication:** Secure sign-up and login functionality protected by encrypted JSON Web Tokens (JWT) and bcrypt password hashing.
 * **Task Assignment:** Users can create tasks and deploy them directly to specific team members.
