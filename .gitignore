@@ -1,0 +1,18 @@
+# Node Modules (Do not upload these massive folders)
+node_modules/
+algonive-frontend/node_modules/
+algonive-backend/node_modules/
+
+# Environment Variables & Secrets (Keep your DB passwords safe)
+.env
+algonive-backend/.env
+algonive-frontend/.env
+
+# Production Build outputs
+dist/
+algonive-frontend/dist/
+.dist/
+
+# System Files
+.DS_Store
+Thumbs.db

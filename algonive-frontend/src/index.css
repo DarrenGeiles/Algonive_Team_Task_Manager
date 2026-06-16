@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* 🚀 FIX: Force Tailwind v4 to execute dark mode utilities when the .dark class is active */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-slate-950: #020617;
+  --color-slate-900: #0f172a;
+}
+
+@layer base {
+  body {
+    @apply antialiased min-h-screen transition-colors duration-500;
+  }
+  
+  /* Light Mode Base Context */
+  html:not(.dark) body {
+    @apply bg-slate-50 text-slate-800;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(255, 255, 255, 1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, rgba(56, 189, 248, 0.05) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.05) 0, transparent 50%);
+  }
+
+  /* Dark Mode Base Context */
+  html.dark body {
+    @apply bg-slate-950 text-slate-100;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(15, 23, 42, 1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, rgba(56, 189, 248, 0.15) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.15) 0, transparent 50%);
+  }
+}
+
+/* Premium Dynamic Webkit Scrollbars */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+html:not(.dark) ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.02); }
+html.dark ::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.02); }
+html:not(.dark) ::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.1); border-radius: 10px; }
+html.dark ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 10px; }
